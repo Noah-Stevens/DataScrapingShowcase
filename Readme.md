@@ -1,55 +1,50 @@
-# Web Scraping Showcase — Crypto Market Analysis  
+# Web Scraping Showcase — Mars News & Weather  
 
-This project applies unsupervised learning techniques to cryptocurrency market data.  
-It uses clustering algorithms to identify patterns among cryptocurrencies and visualizes relationships in reduced dimensions.
+This project demonstrates web scraping, data cleaning, and exploratory analysis using Python.  
+It extracts information from static HTML pages, organizes it into structured datasets, and analyzes Martian weather.
 
 ## Repository Contents
-- Crypto_Clustering.ipynb — Main notebook for preprocessing, clustering, and visualization
-- Resources/crypto_market_data.csv — Dataset of crypto market prices
+- part_1_mars_news.ipynb — Scrape Mars news titles and previews
+- part_2_mars_weather.ipynb — Parse, clean, and analyze Mars weather data
+- mars_table.csv — Cleaned dataset of Martian daily weather
 - LICENSE — GPL-3.0 License
 
 ## Project Overview
-### Data Preparation
-- Load cryptocurrency market dataset
-- Normalize price data using StandardScaler
-- Prepare data for clustering and dimensionality reduction
+### Part 1 — Mars News
+- Parse an HTML file containing NASA Mars news
+- Extract titles and teaser text
+- Build a clean Pandas DataFrame
 
-### K-Means Clustering
-- Apply K-Means to identify groups of similar cryptocurrencies
-- Determine optimal number of clusters using the Elbow method
-- Visualize clusters in feature space
-
-### PCA Dimensionality Reduction
-- Reduce features using Principal Component Analysis (PCA)
-- Compare clustering results between original scaled data and PCA-reduced data
-- Visualize PCA-transformed clusters
-
-### Analysis
-- Compare cluster assignments from full feature space vs PCA
-- Evaluate impact of dimensionality reduction on clustering accuracy
-- Generate scatterplots for clear visualization of market groupings
+### Part 2 — Mars Weather
+- Scrape an HTML table of historical weather data on Mars
+- Clean and convert data types
+- Analyze:
+  - Coldest and warmest months
+  - Atmospheric pressure variation
+  - Length of a Martian year
+- Save cleaned dataset as mars_table.csv
 
 ## Tools & Libraries
+- BeautifulSoup — HTML parsing
 - Pandas — data wrangling
-- scikit-learn — clustering (K-Means) and PCA
-- Matplotlib / hvPlot — visualization
-- StandardScaler — feature normalization
+- Matplotlib / Plotly — visualization
+- LXML — parser backend
 
 ## Quick Start
 1. Clone the repo
    ```bash
-   git clone https://github.com/Noah-Stevens/CryptoClustering-challenge.git
-   cd CryptoClustering-challenge
+   git clone https://github.com/Noah-Stevens/DataScraping_Challenge.git
+   cd DataScraping_Challenge
    ```
 
 2. Install dependencies
    ```bash
-   pip install pandas scikit-learn matplotlib hvplot
+   pip install pandas beautifulsoup4 lxml requests matplotlib plotly
    ```
 
-3. Run notebook
-   - Open `Crypto_Clustering.ipynb` in Jupyter Notebook or JupyterLab
-   - Execute cells to reproduce analysis
+3. Run notebooks
+   - part_1_mars_news.ipynb
+   - part_2_mars_weather.ipynb
 
 ## License
 GPL-3.0 License. See LICENSE file.
@@ -57,3 +52,4 @@ GPL-3.0 License. See LICENSE file.
 ## Author
 Noah Stevens  
 [LinkedIn](https://www.linkedin.com/in/noah-stevens-2a47a3331/)
+
