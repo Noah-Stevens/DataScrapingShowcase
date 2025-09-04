@@ -1,4 +1,4 @@
-# Data Colleciton Showcase — Mars News & Weather  
+# Data Scraping Showcase — Mars News & Weather  
 
 This project demonstrates web scraping, data cleaning, and exploratory analysis using Python.  
 It extracts information from static HTML pages, organizes it into structured datasets, and analyzes Martian weather.
